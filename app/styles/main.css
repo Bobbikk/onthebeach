@@ -1,0 +1,206 @@
+body{
+  background-image: url('../images/background.jpg');
+  background-repeat: repeat-x;
+  font-size: 62.5%;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+p, 
+a{
+  font-family: calibri, sans-serif;
+  font-weight: 200;
+}
+
+.container{
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  position: relative;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+  }
+
+/*-----------------------------------------------------------------------------
+Options buttons
+-----------------------------------------------------------------------------*/
+
+.options_buttonholder{
+  width: 100%;
+  list-style-type: none;
+  margin: 0 0 10px 0;
+  padding: 10px 0;
+}
+
+.options_buttonholder :first-child{
+  margin-left: 0;
+}
+
+.options_buttonholder li{
+  float: left;
+  padding: 0px 10px;
+  margin-left: 15px;
+  background-color: #AFEEEE;
+  width: 170px;
+  height: 56px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2); /*#3899cc*/;
+}
+
+.options_buttonholder li a{
+  color: #0099cc;
+  text-decoration: none;
+  font-size: .9rem;
+  display: block;
+  height: 100%;
+  padding: 20px;
+}
+
+.options_buttonholder .active{
+  background: linear-gradient(0deg, #00bbff, #00bfff 99%);
+}
+
+.options_buttonholder .active a{
+  color: #fff;
+}
+
+.options_filter{
+  margin: 10px 0 20px 10px;
+  width: 290px;
+  font-size: 1rem;
+}
+
+.options_filter.first{
+  margin-left: 0;
+}
+
+/*-----------------------------------------------------------------------------
+Holiday listings
+-----------------------------------------------------------------------------*/
+
+.holiday-listing{
+  background-size: 600px;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  box-shadow: 1px 2px 5px 1px #d5d5d5;
+}
+
+.holiday-listing_details{
+  background-color: rgba(228, 229, 229, .8);
+  padding: 0px;
+  width: 100%;
+  margin-bottom: 300px;
+}
+
+.holiday-listing_details h1,
+.holiday-listing_details h2 {
+  color: #002266;
+  margin: 0;
+}
+
+.holiday-listing_details h1{
+  padding: 10px 10px 2px 10px;
+}
+
+.holiday-listing_details h2{
+  padding: 2px 10px 10px 10px;
+  font-size: .7rem;
+}
+
+.star{
+  color: #ffb42c;
+  -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: #f98600;
+  margin: 0 2px;
+  font-size: .8rem;
+
+}
+
+/*-----------------------------------------------------------------------------
+Holiday listings prices
+-----------------------------------------------------------------------------*/
+
+.holiday-listing_price{
+  float: right;
+  background-color: rgba(255, 200, 75, 1);
+  width: 100px;
+  margin:0;
+  padding: 0;
+}
+
+.holiday-listing_price{
+    color: #002266;
+    border-left: 2px #002266 solid;
+    opacity: 1;
+}
+
+.holiday-listing_price p{
+  text-align: right;
+  padding: 10px 10px 0 10px;
+  margin: 0;
+}
+.holiday-listing_price h3{
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 2px 10px 10px 10px;
+  text-align: right;
+}
+
+/*-----------------------------------------------------------------------------
+Holiday listings intinerary
+-----------------------------------------------------------------------------*/
+
+.holiday-listing_itinerary{
+  background-color: #0099cc;
+  margin: 0;
+}
+
+.holiday-listing_itinerary p{
+  color: #fff;
+  padding: 15px 10px;
+  margin: 0;
+  font-size: .9rem;
+  font-weight: 100;
+}
+
+/*-----------------------------------------------------------------------------
+Holiday listings optional detail view
+-----------------------------------------------------------------------------*/
+
+.holiday-listing_detailView{
+  background-color: #fff;
+  padding-bottom: 10px;
+}
+
+.holiday-listing_detailView p{
+  color: #0099cc;
+  font-size: .8rem;
+}
+
+.holiday-listing_bookNow{
+  display: block;
+  width: 150px;
+  background-color: #002266;
+  color: #fff;
+  margin: 5px auto 5px auto;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  box-shadow: 0px 1px 5px 1px #e5e5e5;
+}
+
+.details-arrow{
+  float: right;
+  font-size: 1.2rem;
+  margin-top: -5px;
+}
+
+

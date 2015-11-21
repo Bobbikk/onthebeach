@@ -1,0 +1,31 @@
+<section class="options">
+  <ul class="options_buttonholder clearfix">
+      <li ng-class="{'resort':'active'}[orderProp]"><a href="javascript:void(0)"  ng-click="setOrder('resort')">Sort <strong>alphabetically</strong></a></li>
+      <li ng-class="{'price':'active'}[orderProp]"><a href="javascript:void(0)" ng-click="setOrder('price')">Sort by <strong>price</strong></a></li>
+      <li ng-class="{'stars':'active'}[orderProp]"><a href="javascript:void(0)" ng-click="setOrder('stars')">Sort by <strong>star rating</strong></a></li>
+  </ul>
+  <select class="options_filter first" ng-model="airport" ng-options="holiday.airport as holiday.airport for holiday in holidays | unique:'airport' ">
+    <option value="" label="Filter by airport">Filter by airport</option>
+  </select> 
+  <select class="options_filter" ng-model="date" ng-options="holiday.departure as holiday.departure for holiday in holidays | unique:'departure'">
+    <option value="" label="Filter by date">Filter by date</option>
+  </select>
+</section>
+<section class="hoiiday-list" ng-repeat="holiday in holidays | orderBy: orderProp: true | filter: {departure: date || undefined} | filter: {airport: airport || undefined}">
+  <div class="holiday-listing" style="background-image: url('{{holiday.imgsrc}}');">
+      <div class="holiday-listing_details">
+        <div class="holiday-listing_price">
+          <p><strong>holiday price</strong></p>
+          <h3><strong>{{holiday.price | currency:"£"}}</strong></h3>
+        </div>
+        <h1><strong>{{holiday.resort}}</strong> <span class="star" ng-repeat="rating in starRepeater(holiday)" ng-bind-html="rating"></span></h1>
+        <h2>{{holiday.location}}</h2>
+      </div>    
+  <div class="holiday-listing_itinerary" ng-click="display_details()">
+      <p ng-click="toggleDetails(holiday)"><strong>{{holiday.departure}}</strong> for <strong>{{holiday.duration}}</strong> from <strong>{{holiday.airport}}</strong>, {{holiday.people}} <span class="details-arrow"><strong><i ng-class="{true: 'fa fa-chevron-down', false: 'fa fa-chevron-right'}[holiday.details]"></i></strong></span></p>
+      <div class="holiday-listing_detailView" ng-show="holiday.details">
+        <p>{{holiday.fullDetails}}</p>
+        <a class="holiday-listing_bookNow">BOOK NOW</a>
+      </div>
+  </div>
+</section>
